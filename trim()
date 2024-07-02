@@ -1,0 +1,13 @@
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        String s1="     java     is      ";
+        System.out.println(s1.length());
+        String s2=s1.trim();
+        System.out.println(s2.length());
+        System.out.println(s2);
+        }
+}
+
+        
