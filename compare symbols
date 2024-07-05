@@ -1,0 +1,61 @@
+Given a string S(input consisting) of ‘’ and ‘#’. The length of the string is variable. The task is to find the minimum number of ‘’ or ‘#’ to make it a valid string. The string is considered valid if the number of ‘’ and ‘#’ are equal. The ‘’ and ‘#’ can be at any position in the string.
+
+Input Format
+
+Read a string
+
+Constraints
+
+string
+
+Output Format
+
+(>#): positive integer (#>): negative integer (#=*): 0
+
+Sample Input 0
+
+###***
+Sample Output 0
+
+0
+Sample Input 1
+
+**###*##*###
+Sample Output 1
+
+-4
+
+
+Source code
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        String s1=s.next();
+        int a=0,b=0;
+        for(int i=0;i<s1.length();i++)
+        {
+            char c=s1.charAt(i);
+            if(c=='#')
+            {
+                a++;
+            }
+            if(c=='*')
+            {
+                b++;
+            }
+        }
+        if(a==b)
+            {
+                System.out.println(0);
+            }
+            else
+            {
+                System.out.println(b-a);
+            }
+    }
+}
